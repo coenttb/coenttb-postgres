@@ -12,8 +12,7 @@ extension Target.Dependency {
 }
 
 extension Target.Dependency {
-    static var codable: Self { .product(name: "MacroCodableKit", package: "macro-codable-kit") }
-    static var memberwiseInit: Self { .product(name: "MemberwiseInit", package: "swift-memberwise-init-macro") }
+    
 }
 
 let package = Package(
@@ -26,14 +25,13 @@ let package = Package(
         .library(name: .postgres, targets: [.postgres]),
     ],
     dependencies: [
-        .package(url: "https://github.com/coenttb/macro-codable-kit.git", branch: "main"),
-        .package(url: "https://github.com/gohanlon/swift-memberwise-init-macro", from: "0.3.0"),
+        
     ],
     targets: [
         .target(
             name: .postgres,
             dependencies: [
-                .memberwiseInit,
+                
             ]
         ),
         .testTarget(

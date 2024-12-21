@@ -6,11 +6,15 @@
 //
 
 import Foundation
-import MemberwiseInit
 
 extension Client {
-    @MemberwiseInit(.public)
     public struct EnvVars: Codable {
         public var databaseUrl: String
+        
+        public init(
+            databaseUrl: String
+        ) {
+            self.databaseUrl = databaseUrl
+        }
     }
 }

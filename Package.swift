@@ -4,7 +4,7 @@ import Foundation
 import PackageDescription
 
 extension String {
-    static let postgres: Self = "CoenttbPostgres"
+    static let postgres: Self = "Postgres"
 }
 
 extension Target.Dependency {
